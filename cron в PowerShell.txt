@@ -1,0 +1,8 @@
+# crontab -e
+
+# ЕЖЕДНЕВНО: парсинг в 8 утра
+0 8 * * * cd /path/to/bot && python scraper.py >> scraper.log 2>&1
+
+
+# ЕЖЕНЕДельно: очистка по воскресеньям
+0 2 * * 0 cd /path/to/bot && python db_maintenance.py >> db.log 2>&1
